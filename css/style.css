@@ -18,24 +18,28 @@ body {
     text-transform: uppercase;
 }
 
+.text-grey {
+    color: #777777;
+}
+
 /* MAIN */
 main {
     display: flex;
-    height: calc(100vh - 45px);
+    height: calc(100vh - 80px);
 }
 
 /* Navbar */
 .navbar {
-    width: 165px;
+    width: 225px;
     height: 100%;
+    padding: 10px;
     font-size: 12px;
     background-color: #000;
 }
 
 /* Navbar-Top */
 .navbar-top {
-    height: calc(100% - 86px);
-    padding: 10px;
+    height: calc(100% - 60px);
 }
 
 .navbar-top > img {
@@ -60,7 +64,7 @@ main {
     width: 25px;
 }
 
-.navbar-top h4 {
+.navbar-top h3 {
     padding: 20px 0 10px;
 }
 
@@ -83,10 +87,6 @@ main {
 }
 
 /* Navbar-Bottom */
-.navbar-bottom {
-    padding: 10px;
-}
-
 .navbar-bottom i {
     padding-bottom: 10px;
     color: #696969;  
@@ -116,7 +116,7 @@ main {
     overflow: hidden;
 }
 
-.navbar-bottom .profile h4 {
+.navbar-bottom .profile h3 {
     padding-left: 10px;
 }
 
@@ -124,13 +124,13 @@ main {
 .main-content {
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: #141922;
 }
 
 /* Upgrade */
 .upgrade {
     height: 45px;
-    background-color: #361a00;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Menù */
@@ -160,12 +160,96 @@ main {
 .player {
     display: flex;
     justify-content: space-between;
-    height: 45px;
-    background-color: #3b3a3b;
+    height: 80px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: #282828;
 }
 
-.album,
-.controller,
-.audio {
-    background-color:   #949294;
+.player .album {
+    display: flex;
+    align-items: center;
+}
+
+.player .album img {
+    width: 40px;
+}
+
+.player .album .track-name {
+    padding-left: 10px;
+    font-size: 10px;
+}
+
+.player .album .icon {
+    padding-left: 20px;
+}
+
+.player .album .icon .fa-folder {
+    padding-left: 10px;
+}
+
+.player .controller {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.player .controller .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.player .controller .button .fa-play-circle {
+    font-size: 30px;
+}
+
+.player .controller .button i {
+    padding: 0 10px;
+}
+
+
+.player .controller .advanced {
+    display: flex;
+    align-items: center;
+}
+
+.player .controller .advanced .track-bar {
+    width: 400px;
+}
+
+.player .controller .advanced::before {
+    content: '0:25';
+    font-size: 10px;
+    padding-right: 20px;
+}
+
+.player .controller .advanced::after {
+    content: '4:35';
+    font-size: 10px;
+    padding-left: 20px;
+}
+
+.player .audio {
+    display: flex;
+    align-items: center;
+}
+
+.player .audio i {
+    padding-right: 20px;
+}
+
+.player .track-bar {
+    width: 120px;
+    height: 4px;
+    background-color: #5a5a5a;
+    border-radius: 10px;
+}
+
+.player .track-bar .scroll {
+    width: 25%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 10px;
 }
