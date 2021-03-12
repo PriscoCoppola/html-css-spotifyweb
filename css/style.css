@@ -1,3 +1,6 @@
+/************************** 
+DESKTOP FIRST
+**************************/
 /* GENERAL */
 * {
     margin: 0;
@@ -6,7 +9,13 @@
 }
 
 body {
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
+}
+
+/* UTILITIES */
+.uppercase {
+    text-transform: uppercase;
 }
 
 /* MAIN */
@@ -19,18 +28,96 @@ main {
 .navbar {
     width: 165px;
     height: 100%;
-    background-color: #4e4c4e;
+    font-size: 12px;
+    background-color: #000;
 }
 
 /* Navbar-Top */
 .navbar-top {
-    height: calc(100% - 45px);
+    height: calc(100% - 86px);
+    padding: 10px;
+}
+
+.navbar-top > img {
+    width: 100px;
+    padding-bottom: 20px;
+}
+
+.navbar-top li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    line-height: 32px;
+}
+
+.navbar-top li a {
+    padding-left: 5px;
+    text-decoration: none;
+    color: #696969;
+}
+
+.navbar-top li img {
+    width: 25px;
+}
+
+.navbar-top h4 {
+    padding: 20px 0 10px;
+}
+
+.navbar-top .plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #696969; 
+}
+
+.navbar-top .plus i {
+    color: #000;
+    font-size: 20px;
+}
+
+.navbar-top .playlist li:first-child {
+    margin-bottom: 10px;
 }
 
 /* Navbar-Bottom */
 .navbar-bottom {
-    height: 45px;
-    background-color: #272627;
+    padding: 10px;
+}
+
+.navbar-bottom i {
+    padding-bottom: 10px;
+    color: #696969;  
+}
+
+.navbar-bottom a {
+    padding-left: 5px;
+    text-decoration: none;
+    color: #696969;
+}
+
+.navbar-bottom .install {
+    border-bottom: 1px solid #696969;
+}
+
+.navbar-bottom .profile {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.navbar-bottom .image {
+    width: 25px;
+    height: 25px;
+    background-color: #808080;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.navbar-bottom .profile h4 {
+    padding-left: 10px;
 }
 
 /* MAIN-CONTENT */
