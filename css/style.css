@@ -22,6 +22,14 @@ body {
     color: #777777;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.pd-0-20 {
+    padding: 0 20px;
+}
+
 /* MAIN */
 main {
     display: flex;
@@ -125,35 +133,95 @@ main {
     width: 100%;
     height: 100%;
     background-color: #141922;
+    position: relative;
 }
 
 /* Upgrade */
 .upgrade {
-    height: 45px;
-    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: flex-end;
+    height: 90px;
+    width: 100%;
+    padding: 24px 20px 24px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+}
+
+.upgrade .btn {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    min-width: 200px;
+    font-size: 14px;
 }
 
 /* Menù */
 .menu {
-    height: 35px;
-    background-color: #272627;
+    margin-top: 90px;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.menu li a {
+    padding: 0 10px;
+    text-decoration: none;
+    color: #7d7f84;
 }
 
 /* Recent */
 .overflow {
-    height: calc(100% - 80px);
+    height: 100%;
     overflow: auto;
+}
+
+.recent h2 {
+    padding: 20px 0;
+}
+
+.creatly h2,
+.artist h2 {
+    padding: 20px 0 10px;
+}
+
+.recent h4,
+.creatly h4 {
+    padding: 10px 0;
 }
 
 .row {
     display: flex;
 }
 
-.disc {
-    width: 200px;
-    height: 200px;
-    margin: 5px;
-    background-color: #fff;
+.recent .disc,
+.creatly .disc,
+.artist .disc {
+    width: calc(100% / 6);
+    margin: 20px;
+}
+
+.artist .disc {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.recent .disc img,
+.creatly .disc img,
+.artist .disc img {
+    width: 100%;
+}
+
+.recent p,
+.creatly p,
+.artist p {
+    padding-bottom: 20px;
+    color: #7d7f84;
+    font-size: 12px;
 }
 
 /* FOOTER */
