@@ -38,21 +38,34 @@ main {
 
 /* Navbar */
 .navbar {
-    width: 225px;
-    height: 100%;
-    padding: 10px;
+    min-width: 200px;
     font-size: 12px;
     background-color: #000;
+    overflow-y: hidden;
 }
 
 /* Navbar-Top */
+.navbar-top .logo-small {
+    display: none;
+}
+
 .navbar-top {
-    height: calc(100% - 60px);
+    height: calc(100% - 80px);
+    overflow-y: hidden;
+    padding: 10px;
 }
 
 .navbar-top > img {
     width: 100px;
     padding-bottom: 20px;
+}
+
+.navbar-top .bar::before {
+    content: '';
+    border-left: 3px solid #adff2f;
+    height: 35px;
+    position: absolute;
+    left: 0;
 }
 
 .navbar-top li {
@@ -94,7 +107,16 @@ main {
     margin-bottom: 10px;
 }
 
+.navbar-top .playlist {
+    max-height: 200px;
+    overflow: auto;
+}
+
 /* Navbar-Bottom */
+.navbar-bottom {
+    padding: 10px;
+}
+
 .navbar-bottom i {
     padding-bottom: 10px;
     color: #696969;  
@@ -134,6 +156,7 @@ main {
     height: 100%;
     background-color: #141922;
     position: relative;
+    overflow-y: hidden;
 }
 
 /* Upgrade */
@@ -145,6 +168,7 @@ main {
     padding: 24px 20px 24px 0;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
+    overflow-y: hidden;
 }
 
 .upgrade .btn {
@@ -164,14 +188,31 @@ main {
 .menu ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     padding: 20px 0;
     list-style: none;
 }
 
 .menu li a {
-    padding: 0 10px;
+    display: inline-block;
+    padding: 20px 10px;
     text-decoration: none;
     color: #7d7f84;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li .bar-1:first-child::after {
+    content: '';
+    display: inline-block;
+    width: 40px;
+    border-bottom: 3px solid #adff2f;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* Recent */
@@ -196,13 +237,14 @@ main {
 
 .row {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .recent .disc,
 .creatly .disc,
 .artist .disc {
-    width: calc(100% / 6);
-    margin: 20px;
+    width: calc(100% / 6 - 20px);
+    margin: 10px;
 }
 
 .artist .disc {
@@ -214,6 +256,7 @@ main {
 .creatly .disc img,
 .artist .disc img {
     width: 100%;
+    height: auto;
 }
 
 .recent p,
@@ -249,17 +292,20 @@ main {
 }
 
 .player .album .icon {
+    display: flex;
     padding-left: 20px;
 }
 
-.player .album .icon .fa-folder {
-    padding-left: 10px;
+.player .album .icon .fa-heart {
+    padding-right: 10px;
 }
 
 .player .controller {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
 }
 
 .player .controller .button {

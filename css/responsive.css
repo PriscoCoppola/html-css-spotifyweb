@@ -1,0 +1,82 @@
+/******************************* 
+RESPONSIVE
+*******************************/
+
+/* Medium - M */
+@media screen and (max-width: 1199px) {
+    .recent .disc,
+    .creatly .disc,
+    .artist .disc {
+        width: calc(100% / 4 - 20px);
+    }
+
+    .player .controller .advanced .track-bar {
+        width: 200px;
+    }
+
+    .player .track-bar {
+        width: 60px;
+    }
+}
+
+/* Small - Small */
+@media screen and (max-width: 767px) {
+    .recent .disc,
+    .creatly .disc,
+    .artist .disc {
+        width: calc(100% / 2 - 20px);
+    }
+
+    .player .controller .advanced .track-bar {
+        width: 120px;
+    }
+
+    .player .album .icon {
+        flex-direction: column;
+    }
+
+    .player .album .icon .fa-heart {
+        padding-right: 0;
+        padding-bottom: 5px;
+    }
+}
+
+/* Extra-Small - XS */
+@media screen and (max-width:600px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 50px;
+    }
+    
+    .navbar-top .logo-small {
+        display: block;
+        display: block;
+        width: 25px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-top li {
+        padding: 5px 0;
+    }
+    
+    .navbar-top .logo,
+    .navbar-top li a,
+    .navbar-top .playlist,
+    .navbar-top h3,
+    .navbar-bottom h3,
+    .navbar-bottom a {
+        display: none;
+    }
+
+    .navbar-bottom .install {
+        display: flex;
+        justify-content: center;
+        border: 0;
+    }
+    
+    .player .controller .advanced .track-bar {
+        width: 90px;
+    }
+}
