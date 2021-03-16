@@ -182,6 +182,7 @@ main {
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     overflow-y: hidden;
+    z-index: 10;
 }
 
 .upgrade .btn {
@@ -223,7 +224,7 @@ main {
     position: relative;
 }
 
-.menu li .bar-1:first-child::after {
+.menu li .bar-1::after {
     content: '';
     display: inline-block;
     width: 40px;
@@ -389,12 +390,14 @@ main {
     content: '0:25';
     font-size: 10px;
     padding-right: 20px;
+    animation: before 10s linear infinite;
 }
 
 .player .controller .advanced::after {
     content: '4:35';
     font-size: 10px;
     padding-left: 20px;
+    animation: after 10s linear infinite;
 }
 
 .player .audio {
@@ -421,6 +424,7 @@ main {
     background-color: #fff;
     border-radius: 10px;
     transition: background-color .3s;
+    animation: advanced 10s linear infinite;
 }
 
 .player .track-bar .scroll::after {
@@ -432,9 +436,15 @@ main {
     border-radius: 50%;
     position: absolute;
     top: -5px;
-    left: 23%;
+    left: 25%;
     opacity: 0;
     transition: opacity .3s;
+    animation: advanced-1 10s linear infinite;
+}
+
+.player .audio .track-bar .scroll,
+.player .audio .track-bar .scroll::after {
+    animation: none;
 }
 
 .player i {
@@ -462,4 +472,89 @@ main {
 
 .player .controller .button .fa-play-circle:hover {
     scale: 1.1;
+}
+
+/* Animation */
+@keyframes advanced {
+    from {
+        width: 25%
+    }
+    to {
+        width: 35%
+    }
+}
+
+@keyframes advanced-1 {
+    from {
+        left: 25%
+    }
+    to {
+        left: 35%
+    }
+}
+
+@keyframes after {
+    10% {
+        content: '4:34'
+    }
+    20% {
+        content: '4:33'
+    }
+    30% {
+        content: '4:32'
+    }
+    40% {
+        content: '4:31'
+    }
+    50% {
+        content: '4:30'
+    }
+    60% {
+        content: '4:29'
+    }
+    70% {
+        content: '4:28'
+    }
+    80% {
+        content: '4:27'
+    }
+    90% {
+        content: '4:26'
+    }
+    100% {
+        content: '4:25'
+    }
+}
+
+@keyframes before {
+    10% {
+        content: '0:26'
+    }
+    20% {
+        content: '0:27'
+    }
+    30% {
+        content: '0:28'
+    }
+    40% {
+        content: '0:29'
+    }
+    50% {
+        content: '0:30'
+    }
+    60% {
+        content: '0:31'
+    }
+    70% {
+        content: '0:32'
+    }
+    80% {
+        content: '0:33'
+    }
+    90% {
+        content: '0:34'
+    }
+    100% {
+        content: '0:35'
+    }
 }
